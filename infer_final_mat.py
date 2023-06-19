@@ -404,6 +404,8 @@ if __name__ == "__main__":
                     "global_orient":
                     rotation_matrix_to_angle_axis(optimed_orient_mat[idx].detach()
                                                  ).cpu().unsqueeze(0),
+                    "globalorient_mat":
+                    optimed_orient_mat[idx].detach().cpu().unsqueeze(0), 
                     "transl":
                     optimed_trans[idx].detach().cpu(),
                     "expression":
