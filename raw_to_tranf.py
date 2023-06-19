@@ -2,7 +2,6 @@ import os
 from tkinter import Tk
 from tkinter.filedialog import askopenfilename
 
-
 def copy_text(input_file, output_file):
     # Open the input file in read mode
     with open(input_file, 'r') as file:
@@ -49,6 +48,14 @@ def copy_text(input_file, output_file):
 
     # Create the output file name
     output_file_name = f"{os.path.splitext(input_base_name)[0]}_T.txt"
+    
+    # Use the same directory as the input file for the output file
+    output_dir = os.path.dirname(input_file)
+    
+    # Create the output file path
+    output_file_path = os.path.join(output_dir, output_file_name)
+
+ 
 
     # Open the output file in write mode
     with open(output_file_name, 'w') as file:
@@ -70,4 +77,3 @@ if not input_file_path:
 
 # Call the function to perform the extraction and copying
 copy_text(input_file_path, "")
-
