@@ -2,6 +2,7 @@ import os
 from tkinter import Tk
 from tkinter.filedialog import askopenfilename
 
+
 def copy_text(input_file, output_file):
     # Open the input file in read mode
     with open(input_file, 'r') as file:
