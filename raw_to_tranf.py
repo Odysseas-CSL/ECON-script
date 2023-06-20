@@ -50,7 +50,7 @@ def copy_text(input_file, output_file):
     output_file_name = f"{os.path.splitext(input_base_name)[0]}_T.txt"
     
     # Use the same directory as the input file for the output file
-    output_dir = os.path.dirname(input_file)
+    output_dir = os.path.dirname(os.path.abspath(input_file))
     
     # Create the output file path
     output_file_path = os.path.join(output_dir, output_file_name)
@@ -58,13 +58,13 @@ def copy_text(input_file, output_file):
  
 
     # Open the output file in write mode
-    with open(output_file_name, 'w') as file:
+    with open(output_file_path, 'w') as file:
         # Write the extracted text to the output file
         file.write(extracted_text_1 + '\n')
         file.write(extracted_text_2 + '\n')
         file.write(extracted_text_3)
 
-    print(f"Extraction and copying complete. Output file: {output_file_name}")
+    print(f"Extraction and copying complete.Location: {output_file_path} Output file: {output_file_name}")
 
 
 # Prompt the user to select the input file
