@@ -1,7 +1,5 @@
 # ECON-script
-updated ECON script for SMPL/SMPL-X data
-
-the contents of this repository are (in order of creation):
+Updated ECON scripts for SMPL/SMPL-X data processing. The contents of this repository are (in order of creation):
 
 ## -infer_final.py
 updated script that outputs SMPL-X information
